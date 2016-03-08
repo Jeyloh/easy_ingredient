@@ -1,6 +1,8 @@
 package com.example.Easy_Ingredient;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Created by Jorgen on 3/6/2016.
@@ -10,11 +12,11 @@ public class UserInterface {
     private Recipe recipe = new Recipe();
 
 
-    public UserInterface(){
+    public UserInterface() {
         userInterface();
     }
 
-    public void userInterface() {
+public void userInterface() {
 
         System.out.println("Do you want to 'Create' or 'Retrieve' a recipe?");
 
@@ -26,8 +28,7 @@ public class UserInterface {
             //Method for creating and adding your recipe to the database
             userCreate();
 
-        }
-        else if (userAnswer.equals("Retrieve")) {
+        } else if (userAnswer.equals("Retrieve")) {
             System.out.println("You want to search for recipes containing your ingredients");
             sleep(1000);
 
@@ -46,7 +47,7 @@ public class UserInterface {
 
                 if (usersIngredient.toLowerCase().equals("done")) {
                     check = false;
-                } else{
+                } else {
                     System.out.println(usersIngredient);
                     addedIngredients.add(usersIngredient);
                     System.out.println("Your current ingredient(s) are");
@@ -77,8 +78,7 @@ public class UserInterface {
                 }
             }
 
-        }
-        else {
+        } else {
             System.out.println("Sorry, please type in 'Create' or 'Retrieve' without apostrophes");
             //TODO take me to the start of the elif
         }
@@ -86,7 +86,7 @@ public class UserInterface {
 
     }
 
-    public void userCreate(){
+    public void userCreate() {
 
         System.out.println("You want to create your own recipe." +
                 "\nAdd a Recipe Name: ");
@@ -128,7 +128,7 @@ public class UserInterface {
         //Find a recipe in the database, corresponding to your ingredients
     }
 
-    public String scanInputString(){
+    public String scanInputString() {
         Scanner scanProduct = new Scanner(System.in);
         String s = scanProduct.next();
 
@@ -136,13 +136,13 @@ public class UserInterface {
     }
 
 
-    public void sleep(int ms){
+    public void sleep(int ms) {
         try {
             Thread.sleep(ms);
-            for(int i = 0; i < ms/1000; i++) {
+            for (int i = 0; i < ms / 1000; i++) {
                 System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
             }
-        } catch(InterruptedException ex) {
+        } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
     }

@@ -9,6 +9,8 @@ import java.util.HashMap;
  */
 public class JavaDB {
 
+
+
     protected ArrayList<HashMap<String, ArrayList<String>>> listOfAllRecipes = new ArrayList<>();
 
     public JavaDB(){
@@ -24,5 +26,7 @@ public class JavaDB {
     public void setListOfAllRecipes(ArrayList<HashMap<String, ArrayList<String>>> listOfAllRecipes) {
         this.listOfAllRecipes = listOfAllRecipes;
     }
+
+
 
 }

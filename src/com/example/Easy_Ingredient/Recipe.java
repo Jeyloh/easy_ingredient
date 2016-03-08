@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * This class is mainly used for storing recipes. Should be replaced by database entites later
+ *
+ * //TODO High prio: Search the recipe map with a TreeSearch, maybe from the SLIT project
+ *
  * Created by Jorgen on 3/6/2016.
  */
 public class Recipe extends JavaDB{
